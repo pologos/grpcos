@@ -25,6 +25,7 @@ gRPC OS to system operacyjny bazujący na protokole gRPC, oferujący:
 
 
 Uruchomienie systemu:
+
 ```bash
 # Konfiguracja środowiska
 cp .env.example .env
@@ -37,6 +38,7 @@ docker-compose up -d
 ## Konfiguracja
 
 Podstawowa konfiguracja w `.env`:
+
 ```bash
 # Konfiguracja bazy danych
 DB_HOST=localhost
@@ -52,7 +54,7 @@ DEBUG=false
 ```
 
 2. Konfiguracja domen:
-3. 
+   
 ```bash
 # /etc/grpc-os/domains.conf
 domain example.com {
