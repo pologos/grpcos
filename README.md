@@ -52,6 +52,7 @@ DEBUG=false
 ```
 
 2. Konfiguracja domen:
+3. 
 ```bash
 # /etc/grpc-os/domains.conf
 domain example.com {
@@ -72,7 +73,8 @@ domain api.example.com {
 ## 1. Podstawowe operacje
 
 ### Logowanie i zarządzanie sesją
-```shell
+
+```bash
 # Logowanie do systemu
 grpc-os> login admin secure_password
 
@@ -84,7 +86,8 @@ grpc-os> logout
 ```
 
 ### Zarządzanie procesami
-```shell
+
+```bash
 # Lista procesów
 grpc-os> ps
 
@@ -102,6 +105,7 @@ grpc-os> restart proc_123
 ```
 
 ### Operacje na obiektach
+
 ```shell
 # Lista obiektów
 grpc-os> ls /
@@ -118,6 +122,7 @@ grpc-os> rm obj_123
 ```
 
 ### Zarządzanie domenami
+
 ```bash
 # Lista domen
 grpc-os> domains
@@ -137,6 +142,7 @@ grpc-os> unassign example.com
 ## Zarządzanie procesami
 
 1. Struktura procesu:
+   
 ```python
 class Process:
     id: str           # Unikalny identyfikator
@@ -147,6 +153,7 @@ class Process:
 ```
 
 2. Operacje na procesach:
+   
 ```python
 # Tworzenie procesu
 process = await client.create_process(
@@ -162,6 +169,7 @@ await client.kill_process(process.id)
 status = await client.get_process_status(process.id)
 ```
 
+
 ## Dodawanie nowych procesów
 
 1. Struktura katalogu procesu:
@@ -175,6 +183,7 @@ processes/
 ```
 
 2. Konfiguracja procesu (process.yml):
+   
 ```yaml
 name: myapp
 version: 1.0
@@ -189,6 +198,7 @@ volumes:
 ```
 
 3. Rejestracja procesu:
+   
 ```bash
 grpc-os register-process ./processes/myapp
 ```
